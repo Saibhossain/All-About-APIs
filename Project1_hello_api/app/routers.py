@@ -1,7 +1,9 @@
-from fastapi import APIRouter
+from fastapi import APIRouter, Header, HTTPException
 from app.schemas import MessageRequest, MessageResponse
 
 router = APIRouter()
+
+DEMO_API_KEY = "my-secret-key"
 
 @router.get("/")
 def home():
@@ -23,3 +25,13 @@ def echo_message(payload: MessageRequest):
         success=True,
         reply=f"Hello {payload.name}, you said: {payload.message} "
     )
+
+@router.get("/protected")
+def protected_route(x_api_key: str = Header(None)):
+    if x_api_key != DEMO_API_KEY:
+        raise HTTPException(status_code=401, detail="Invalid or missing API key")
+
+    return {
+        "success": True,
+        "message": "You accessed a protected endpoint"
+    }
