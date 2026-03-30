@@ -1,4 +1,88 @@
+
+
+
+
+
+
+## 5-project learning path
+    All-About_APIs/
+    ├── project1_hello_api/
+    ├── project2_crud_api/
+    ├── project3_auth_api/
+    ├── project4_ai_api/
+    └── project5_production_ready_api/
+
+# Learning roadmap
+    
+    Project	Goal	What you learn
+    Project 1	First FastAPI app	routes, GET/POST, request/response, Pydantic, docs
+    Project 2	CRUD API	create/read/update/delete, path params, query params
+    Project 3	Auth API	login, JWT, protected routes, password hashing
+    Project 4	AI API	inference endpoint, file upload, model/service layer
+    Project 5	Production-ready API	clean architecture, env config, Docker, logging, deployment
+
+## Project 1 — Hello API
+    This project will teach:
+    
+    what happens when API receives a request
+    how FastAPI route works
+    how request body works
+    how validation works
+    how to run with Uvicorn
+    how to test in /docs
+
+##### File structure
+
+    All-About_APIs/
+    └── project1_hello_api/
+        ├── app/
+        │   ├── __init__.py
+        │   ├── main.py
+        │   ├── schemas.py
+        │   └── routes.py
+        ├── requirements.txt
+        └── README.md
+
+
 ## 👨‍💻 Author
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
