@@ -1,14 +1,12 @@
-from typing_extensions import Self
-
 from pydantic import BaseModel, Field, field_validator
 from typing import Optional, Any
 
 
 class StudentBase(BaseModel):
-    name :str = Field(..., min_length=2, max_length=50, description="Student full name")
-    age :int = Field(...,ge=5, le=100, description="Student age")
+    name : str = Field(..., min_length=2, max_length=50, description="Student full name")
+    age : int = Field(...,ge=5, le=100, description="Student age")
     department : str= Field(..., min_length=2, max_length=200, description="Department name please")
-    email: str= Field(..., min_length=5,max_length=100,description="Provide Student email")
+    email : str= Field(..., min_length=5,max_length=100,description="Provide Student email")
 
     @field_validator("name")
     @classmethod
