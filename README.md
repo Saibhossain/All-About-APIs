@@ -1,6 +1,27 @@
+# 👨‍💻 Author
+# **Md Saib Hossain**
+**AI Engineer • AI / ML / LLM & AI Safety Researcher**  
+**Agentic AI Developer • Researcher in Autonomous & Multi-Agent Systems • Advanced Agentic AI Architect**
 
+Designing safe, scalable, and human-centered intelligent systems for real-world healthcare and autonomous AI applications.
 
+<p align="left">
+  <a href="mailto:saibhossain5@gmail.com">
+    <img src="https://img.shields.io/badge/Email-saibhossain5%40gmail.com-red?style=flat&logo=gmail">
+  </a>
+  <img src="https://img.shields.io/badge/Phone-%2B8801769918015-green?style=flat&logo=whatsapp">
+  <a href="https://saibhossain.github.io/">
+    <img src="https://img.shields.io/badge/Portfolio-Visit-blue?style=flat&logo=google-chrome">
+  </a>
+  <a href="https://github.com/Saibhossain">
+    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github">
+  </a>
+  <a href="https://linkedin.com/in/saib-hossain-182834229">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin">
+  </a>
+</p>
 
+# Project Descriptions
 
 
 
@@ -74,6 +95,51 @@ FastAPI is a Python API framework built on Starlette and Pydantic, so it gives y
         ├── requirements.txt
         └── README.md
 
+## Project 3 — Auth API with JWT
+    This project teaches:
+    
+    user registration
+    password hashing
+    login
+    JWT access token
+    protected routes
+    current user endpoint
+    role-based protected endpoint
+    clean file structure
+    
+    This is still beginner-friendly, but much closer to real backend work.
+
+##### File structure
+
+    All-About_APIs/
+    └── project3_auth_api/
+        ├── app/
+        │   ├── __init__.py
+        │   ├── main.py
+        │   ├── schemas.py
+        │   ├── database.py
+        │   ├── security.py
+        │   ├── dependencies.py
+        │   └── routes/
+        │       ├── __init__.py
+        │       ├── auth.py
+        │       └── users.py
+        ├── requirements.txt
+        └── README.md
+
+###  What this project will do
+
+We will create these endpoints:
+    
+    Method	Endpoint	Purpose
+    GET	/	health/welcome
+    POST	/auth/register	create user
+    POST	/auth/login	login and get JWT
+    GET	/users/me	get current logged-in user
+    GET	/users/admin-only	protected admin route
+
+
+    
 
 
 
@@ -111,33 +177,4 @@ FastAPI is a Python API framework built on Starlette and Pydantic, so it gives y
 
 
 
-
-
-
-
-
-## 👨‍💻 Author
-
-
-
-# **Md Saib Hossain**
-**AI Engineer • AI / ML / LLM & AI Safety Researcher**  
-**Agentic AI Developer • Researcher in Autonomous & Multi-Agent Systems • Advanced Agentic AI Architect**
-
-Designing safe, scalable, and human-centered intelligent systems for real-world healthcare and autonomous AI applications.
-
-<p align="left">
-  <a href="mailto:saibhossain5@gmail.com">
-    <img src="https://img.shields.io/badge/Email-saibhossain5%40gmail.com-red?style=flat&logo=gmail">
-  </a>
-  <img src="https://img.shields.io/badge/Phone-%2B8801769918015-green?style=flat&logo=whatsapp">
-  <a href="https://saibhossain.github.io/">
-    <img src="https://img.shields.io/badge/Portfolio-Visit-blue?style=flat&logo=google-chrome">
-  </a>
-  <a href="https://github.com/Saibhossain">
-    <img src="https://img.shields.io/badge/GitHub-Profile-black?style=flat&logo=github">
-  </a>
-  <a href="https://linkedin.com/in/saib-hossain-182834229">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat&logo=linkedin">
-  </a>
-</p>
+#
