@@ -44,48 +44,79 @@
         └── README.md
 
 
+## Project 2 — Student CRUD API
+
+This project teaches the next real step after Project 1:
+
+* CRUD = Create, Read, Update, Delete
+* path parameters
+* query parameters
+* request body
+* response models
+* status codes
+* router-based file structure
+* simple API-key protection for write operations
+
+FastAPI is a Python API framework built on Starlette and Pydantic, so it gives you routing, request handling, validation, and automatic docs together.
+
+##### File structure
+    All-About_APIs/
+    └── project2_student_crud_api/
+        ├── app/
+        │   ├── __init__.py
+        │   ├── main.py
+        │   ├── schemas.py
+        │   ├── database.py
+        │   ├── dependencies.py
+        │   └── routes/
+        │       ├── __init__.py
+        │       └── students.py
+        ├── requirements.txt
+        └── README.md
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 👨‍💻 Author
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
