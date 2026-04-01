@@ -13,3 +13,24 @@ class UserRegister(BaseModel):
         if not value.replace(" ","").isalpha():
             raise ValueError("Error should contain only letters and spaces")
         return value.title()
+
+class UserLogin(BaseModel):
+    email: EmailStr
+    password: str = Field(..., min_length=6, max_length=100)
+
+class UserResponse(BaseModel):
+    id : int
+    name : str
+    email: EmailStr
+    role :str
+
+class TokenResponse(BaseModel):
+    access_token : str
+    token_type: str
+
+class TokenData(BaseModel):
+    email:str |None = None
+
+class MessageResponse(BaseModel):
+    success:bool
+    message:str
