@@ -138,13 +138,52 @@ We will create these endpoints:
     GET	/users/admin-only	protected admin route
 
 
-    
+## Project 4 — AI Inference API
 
+Now we move from normal backend APIs to an AI-style API.
 
+This project teaches:
 
+* how to build an ML inference API with FastAPI
+* how request → model/service → response works
+* how to protect AI endpoints with JWT auth
+* how to separate routes, schemas, auth, and model logic
+* how a beginner AI backend should be structured
+* how to think like an engineer, not just write one endpoint
 
+This project will still use a simple mock model/service, so you clearly understand the architecture first. Later, you can replace the mock logic with a real ML model, LLM call, RAG pipeline, or agentic workflow.
 
+##### File structure
+    All-About_APIs/
+    └── project4_ai_inference_api/
+        ├── app/
+        │   ├── __init__.py
+        │   ├── main.py
+        │   ├── schemas.py
+        │   ├── database.py
+        │   ├── security.py
+        │   ├── dependencies.py
+        │   ├── services/
+        │   │   ├── __init__.py
+        │   │   └── predictor.py
+        │   └── routes/
+        │       ├── __init__.py
+        │       ├── auth.py
+        │       ├── users.py
+        │       └── predict.py
+        ├── requirements.txt
+        └── README.md
 
+### What will you do
+| Method | Endpoint           | Purpose                              |
+| ------ | ------------------ | ------------------------------------ |
+| `GET`  | `/`                | welcome/health                       |
+| `POST` | `/auth/register`   | create user                          |
+| `POST` | `/auth/login`      | login and get JWT                    |
+| `GET`  | `/users/me`        | get current user                     |
+| `POST` | `/predict/risk`    | predict simple lung-risk style score |
+| `POST` | `/predict/explain` | get prediction + explanation         |
+| `GET`  | `/predict/history` | get current user prediction history  |
 
 
 
