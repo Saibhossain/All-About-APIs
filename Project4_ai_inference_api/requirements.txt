@@ -1,8 +1,7 @@
-pydantic
-uvicorn
-fastapi
-python-jose
-passlib
-python-multipart
-email-validator
-bcrypt
+fastapi==0.116.1
+uvicorn[standard]==0.35.0
+pydantic==2.12.5
+python-jose[cryptography]==3.5.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.20
+email-validator==2.3.0
