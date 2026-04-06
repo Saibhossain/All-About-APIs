@@ -186,10 +186,45 @@ This project will still use a simple mock model/service, so you clearly understa
 | `GET`  | `/predict/history` | get current user prediction history  |
 
 
+## Project 5 — Production-Ready AI API
+
+This project upgrades the earlier ideas into a real backend structure with:
+
+* FastAPI app split into multiple modules
+* PostgreSQL
+* SQLAlchemy
+* Alembic migrations
+* JWT auth
+* password hashing
+* versioned API
+* settings from .env
+* structured logging
+* Docker + Docker Compose
+* health check
+* tests
+* prediction service layer
 
 
-
-
+##### File structure
+    All-About_APIs/
+    └── project4_ai_inference_api/
+        ├── app/
+        │   ├── __init__.py
+        │   ├── main.py
+        │   ├── schemas.py
+        │   ├── database.py
+        │   ├── security.py
+        │   ├── dependencies.py
+        │   ├── services/
+        │   │   ├── __init__.py
+        │   │   └── predictor.py
+        │   └── routes/
+        │       ├── __init__.py
+        │       ├── auth.py
+        │       ├── users.py
+        │       └── predict.py
+        ├── requirements.txt
+        └── README.md
 
 
 
