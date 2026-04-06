@@ -6,7 +6,7 @@ from app.routes.predict import router as predict_router
 app = FastAPI(
     title="Project 4 - AI Inference API",
     description="AI inference API with JWT authentication and prediction history",
-    version="1.0.0",
+    version="1.0.4",
 )
 
 app.include_router(auth_router, prefix="/auth", tags=["Auth"])
