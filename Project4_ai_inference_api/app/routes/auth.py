@@ -1,7 +1,8 @@
 from datetime import timedelta
-from fastapi import APIRouter, HTTPException, status
+from fastapi import APIRouter, HTTPException, status, Depends
+from fastapi.security import OAuth2PasswordRequestForm
 
-from app.schemas import UserRegister, UserLogin, UserResponse, TokenResponse
+from app.schemas import UserRegister, UserResponse, TokenResponse
 from app.database import users_db
 import app.database as db_module
 from app.security import hash_password, verify_password, create_access_token
@@ -40,11 +41,12 @@ def register_user(payload: UserRegister):
 
 
 @router.post("/login", response_model=TokenResponse)
-def login_user(payload: UserLogin):
+def login_user(form_data: OAuth2PasswordRequestForm = Depends()):
     user = None
 
+    # In OAuth2PasswordRequestForm, "username" field will contain the email
     for existing_user in users_db.values():
-        if existing_user["email"].lower() == payload.email.lower():
+        if existing_user["email"].lower() == form_data.username.lower():
             user = existing_user
             break
 
@@ -54,7 +56,7 @@ def login_user(payload: UserLogin):
             detail="Invalid email or password",
         )
 
-    if not verify_password(payload.password, user["hashed_password"]):
+    if not verify_password(form_data.password, user["hashed_password"]):
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid email or password",
